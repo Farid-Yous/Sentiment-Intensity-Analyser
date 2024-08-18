@@ -17,5 +17,5 @@
 ## Training and Validation: The model is trained for 10 epochs, with 20% of the data reserved for validation.
 
 # Usage
-## The pretrained model is stored in the .keras file and used in the model-testing.py file where it is imported and tested. Just alter the sample text and run the model-testing file where the output will be between 0(negative) and 1(positive)
+## The trained model is stored in the .keras file and used in the model-testing.py file where it is imported and tested. Just alter the sample text and run the model-testing file where the output will be between 0(negative) and 1(positive)
 
