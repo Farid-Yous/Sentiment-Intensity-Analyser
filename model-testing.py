@@ -32,9 +32,9 @@ def antonym(word):
 
 def Negation(sentence):
     words = sentence.split()
-    for i in range(len(words) - 1):
-        if words[i] == "not" and i + 1 < len(words):
-            antonym_word = antonym(words[i + 1])
+    for i in range(len(words) - 1):        
+        if (words[i] == "not" or words[i] == "dont" or words[i] == "didnt") and i + 1 < len(words):
+            antonym_word = antonym(words[i + 1])           
             if antonym_word is not None:  # Check for None before assigning
                 words[i + 1] = antonym_word
     return " ".join(words)  # Join words back into a sentence
@@ -64,14 +64,14 @@ with open('tokenizer.pkl', 'rb') as file:
 # Summarize model structure
 model.summary()
 
-sample_texts = ["not bad movie at all"]
+sample_texts = ["I didnt love this movie at all , it was not good and i dont recommend this to anyone"]
 sample_texts[0] = Negation(sample_texts[0])
 
 # Preprocess the text
 sample_texts_preprocessed = preprocess_data(sample_texts[0])
 
 # Convert text to sequences
-sample_seqs = tokenizer.texts_to_sequences(sample_texts_preprocessed)
+sample_seqs = tokenizer.texts_to_sequences([sample_texts_preprocessed])
 
 # Pad the sequences to ensure uniform length
 sample_padded = pad_sequences(sample_seqs, maxlen=max_text_length, padding='post')
