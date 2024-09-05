@@ -16,11 +16,11 @@ The Sentiment Intensity Analyzer utilizes a Convolutional Neural Network (CNN) t
  -Output Layer with Sigmoid Activation
  Training and Validation: The model is trained for 10 epochs, with 20% of the data reserved for validation.
 
-# Training
+# Patch 1
 ![Before removal of stopwords](Before(stopwords).png)
 ![After removal of stopwords](After(stopwords).png)
- In patch 1, i decided to remove all stopwords (words such as a, the , and etc.) from training to optimise the accuracy of my model, this removes the weight on stopwords. As you can see from the cross validation performance, the removal of stopwords increased it drastically. The left image is the performance before removing the stopwords and the image on the right is after.
- Also in patch 1, I added a negation handler function which I will be working more on in the future that turns words such as "not good" into words like "bad", this stops the model from reading the word "good" and giving it a positive score.
+- Removed all stopwords (words such as a, the , and etc.) from training to optimise the accuracy of my model, this removes the weight on stopwords. As you can see from the cross validation performance, the removal of stopwords increased it drastically. The left image is the performance before removing the stopwords and the image on the right is after.
+- Added a negation handler function which I will be working more on in the future that turns words such as "not good" into words like "bad", this stops the model from reading the word "good" and giving it a positive score.
 # Usage
  The trained model is stored in the .keras file and used in the model-testing.py file where it is imported and tested. Just alter the sample text and run the model-testing file where the output will be between 0(negative) and 1(positive)
 
