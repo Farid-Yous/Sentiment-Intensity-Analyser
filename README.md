@@ -5,15 +5,25 @@ The Sentiment Intensity Analyzer utilizes a Convolutional Neural Network (CNN) t
 
 # Features
  -Text Preprocessing: Converts text to lowercase and removes punctuation.
+ 
  -Tokenization: Converts text into sequences of integers based on word frequency.
+ 
  -Padding: Ensures that all text sequences are of uniform length.
+ 
  -Model Architecture:
+ 
  -Embedding Layer
+ 
  -Convolutional Layer
+ 
  -Global Max Pooling Layer
+ 
  -Dense Layer
+ 
  -Dropout Layer
+ 
  -Output Layer with Sigmoid Activation
+ 
  Training and Validation: The model is trained for 10 epochs, with 20% of the data reserved for validation.
 
 # Patch 1
