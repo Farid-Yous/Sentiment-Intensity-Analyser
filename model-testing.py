@@ -55,7 +55,7 @@ def preprocess_data(text):
 max_text_length = 200
 
 # Load the pretrained model
-model = load_model('SentimentPatch1.keras')
+model = load_model("SentimentPatch1.keras")
 
 # Load the previously saved tokenizer
 with open('tokenizer.pkl', 'rb') as file:
